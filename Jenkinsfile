@@ -7,22 +7,22 @@ pipeline {
     }
 
     stages {
-        stage('checkout') {
+        stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/Soham2431/Boardgame.git'
             }
         }
-        stage('compile') {
+        stage('Compile') {
             steps {
                 sh 'mvn compile'
             }
         }
-        stage('test') {
+        stage('Test') {
             steps {
                 sh 'mvn test'
             }
         }
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'mvn package'
             }
